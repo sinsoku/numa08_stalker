@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
-require 'numa08_stlaker'
+begin
+  require 'numa08_stalker'
+rescue LoadError
+  require 'rubygems'
+  require 'numa08_stalker'
+end
 twilog = Numa08Stalker::Twilog.new
 response = twilog.fetch
 puts twilog.texts response.body
