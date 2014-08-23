@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'numa08_stlaker'
+twilog = Numa08Stalker::Twilog.new
+response = twilog.fetch
+puts twilog.texts response.body
